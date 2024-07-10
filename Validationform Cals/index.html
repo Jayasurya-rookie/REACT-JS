@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form onsubmit=" submitForm(); return false">
+        <label for="name">name</label>
+        <input type="text" id="name" >
+        <label for="password">password</label>
+        <input type="password" id="password">
+        <BR></BR>
+        <button type="submit">ADD</button>
+        <button type="submit">SUB</button>
+        <button type="submit">MULTI</button>
+        <button type="submit">DIV</button>
+        
+
+    </form>
+    <p id="para"></p>
+    <script>
+        function submitForm(){
+            let a=document.getElementById("name").value;
+            let b=document.getElementById("password").value;
+            if(a===""){
+                alert("plx enter the name & pass");
+                // return false;
+            }
+            if(b===""){
+                alert("plx enter the password");
+                // return false;
+            }
+            if(a!=""&&b!=""){
+                
+                console.log(a+b);
+                document.getElementById("para").innerHTML=(a+" "+b);
+            }
+            
+           
+            // return true;
+
+        }
+    </script>
+</body>
+</html>
